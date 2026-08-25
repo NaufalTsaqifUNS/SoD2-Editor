@@ -136,6 +136,9 @@
     <Compile Include="Core\Addresses\SoD2AddressProfiles.cs" />
     <Compile Include="Core\Game\GameContext.cs" />
     <Compile Include="Core\Game\GameContextFactory.cs" />
+    <Compile Include="Core\Unreal\UObjectReference.cs" />
+    <Compile Include="Core\Unreal\UnrealNameResolver.cs" />
+    <Compile Include="Core\Unreal\UnrealObjectResolver.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
