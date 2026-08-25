@@ -53,11 +53,17 @@ namespace SoD2_Editor.Core.Domain.Character
             if (address == IntPtr.Zero)
                 return string.Empty;
 
+            // Mirrors the legacy FText.Value pointer chain:
+            // FText -> data -> string storage -> UTF-16 buffer.
             var data = _context.Memory.ReadIntPtr(address);
             if (data == IntPtr.Zero)
                 return string.Empty;
 
-            var stringData = _context.Memory.ReadIntPtr(IntPtr.Add(data, 0x8));
+            var stringStorage = _context.Memory.ReadIntPtr(IntPtr.Add(data, 0x8));
+            if (stringStorage == IntPtr.Zero)
+                return string.Empty;
+
+            var stringData = _context.Memory.ReadIntPtr(stringStorage);
             if (stringData == IntPtr.Zero)
                 return string.Empty;
 
