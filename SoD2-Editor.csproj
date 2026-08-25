@@ -129,6 +129,11 @@
     <Compile Include="ItemAdder.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Core\Memory\MemoryService.cs" />
+    <Compile Include="Core\Memory\ProcessMemoryContext.cs" />
+    <Compile Include="Core\Addresses\AddressBook.cs" />
+    <Compile Include="Core\Addresses\AddressProfile.cs" />
+    <Compile Include="Core\Game\GameContext.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
